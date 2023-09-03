@@ -40,8 +40,6 @@ if ($total > 0) {
 
 $html_table .= '<tr style="border: 1px solid black;">
   <td style="border: 1px solid black; padding: 8px;">' . $total . '</td>
-</tr>';
-$html_table .= '<tr style="border: 1px solid black;">
   <td style="border: 1px solid black; padding: 8px;">' . $totalVoltaria . '</td>
 </tr>';
 
