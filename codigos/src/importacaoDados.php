@@ -15,6 +15,9 @@ if (($handle = fopen($csvFile, "r")) !== false) {
 // Calcular o número total de dados
 $total = count($data);
 
+// Pega 5 no total
+$head = array_slice($data, 0, 5);
+
 // Criar uma tabela em Markdown com colunas separadas
 $markdown_table = "| NOME | IDADE | ESTADO | CIDADE | VOLTARIA_NO_EVENTO |\n";
 $markdown_table .= "|------|-------|--------|--------|---------------------|\n";
