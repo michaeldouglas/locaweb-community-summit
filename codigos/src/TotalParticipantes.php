@@ -36,11 +36,16 @@ if ($total > 0) {
   $totalVoltaria = array_sum(array_map(function ($x) {
     return strtolower($x) === 'sim' ? 1 : 0;
   }, $columnData));
+
+  $totalNaoVoltaria = array_sum(array_map(function ($x) {
+    return strtolower($x) === 'nao' ? 1 : 0;
+  }, $columnData));
 }
 
 $html_table .= '<tr style="border: 1px solid black;">
   <td style="border: 1px solid black; padding: 8px;">' . $total . '</td>
   <td style="border: 1px solid black; padding: 8px;">' . $totalVoltaria . '</td>
+  <td style="border: 1px solid black; padding: 8px;">' . $totalNaoVoltaria . '</td>
 </tr>';
 
 $html_table .= '</table>';
