@@ -18,8 +18,8 @@ $total = count($data);
 // Pega 5 no total
 $head = array_slice($data, 0, 5);
 
-// Iniciar a tabela HTML
-$html_table = '<table>';
+// Iniciar a tabela HTML com estilo de espaçamento
+$html_table = '<table style="border-collapse: separate; border-spacing: 10px;">';
 $html_table .= '<tr><th>NOME</th><th>IDADE</th><th>ESTADO</th><th>CIDADE</th><th>VOLTARIA_NO_EVENTO</th></tr>';
 
 foreach ($head as $row) {
