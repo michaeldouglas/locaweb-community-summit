@@ -18,9 +18,9 @@ $total = count($data);
 // Pega 5 no total
 $head = array_slice($data, 0, 5);
 
-// Iniciar a tabela HTML com borda e estilo de espaçamento
-$html_table = '<table style="border-collapse: separate; border-spacing: 10px; border: 1px solid black;">';
-$html_table .= '<tr><th>NOME</th><th>IDADE</th><th>ESTADO</th><th>CIDADE</th><th>VOLTARIA_NO_EVENTO</th></tr>';
+// Iniciar a tabela HTML com borda, estilo de espaçamento e bordas nas colunas e linhas
+$html_table = '<table style="border-collapse: collapse; border-spacing: 10px; border: 1px solid black;">';
+$html_table .= '<tr style="border: 1px solid black;"><th style="border: 1px solid black;">NOME</th><th style="border: 1px solid black;">IDADE</th><th style="border: 1px solid black;">ESTADO</th><th style="border: 1px solid black;">CIDADE</th><th style="border: 1px solid black;">VOLTARIA_NO_EVENTO</th></tr>';
 
 foreach ($head as $row) {
     $merged_row = [];
@@ -28,7 +28,7 @@ foreach ($head as $row) {
         $splited_values = explode(",", $value);
         $merged_row = array_merge($merged_row, $splited_values);
     }
-    $html_table .= '<tr><td>' . implode('</td><td>', $merged_row) . '</td></tr>';
+    $html_table .= '<tr style="border: 1px solid black;"><td style="border: 1px solid black;">' . implode('</td><td style="border: 1px solid black;">', $merged_row) . '</td></tr>';
 }
 
 // Fechar a tabela HTML
