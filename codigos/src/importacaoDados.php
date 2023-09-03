@@ -35,6 +35,6 @@ foreach ($head as $row) {
 $html_table .= '</table>';
 
 // Exibir as informações
-echo "<img src='https://php.locaweb.com.br/wp-content/themes/locaweb-php-community-2023/svg/logo.svg' alt='php-community-2023' />";
+echo "<center><img src='https://php.locaweb.com.br/wp-content/themes/locaweb-php-community-2023/svg/logo.svg' alt='php-community-2023' /><center><br />";
 echo $html_table;
 ?>
