@@ -18,9 +18,9 @@ $total = count($data);
 // Pega 5 no total
 $head = array_slice($data, 0, 5);
 
-// Criar uma tabela em Markdown com colunas separadas
-$markdown_table = "| NOME | IDADE | ESTADO | CIDADE | VOLTARIA_NO_EVENTO |\n";
-$markdown_table .= "|------|-------|--------|--------|---------------------|\n";
+// Iniciar a tabela HTML
+$html_table = '<table>';
+$html_table .= '<tr><th>NOME</th><th>IDADE</th><th>ESTADO</th><th>CIDADE</th><th>VOLTARIA_NO_EVENTO</th></tr>';
 
 foreach ($head as $row) {
     $merged_row = [];
@@ -28,9 +28,12 @@ foreach ($head as $row) {
         $splited_values = explode(",", $value);
         $merged_row = array_merge($merged_row, $splited_values);
     }
-    $markdown_table .= "| " . implode(" | ", $merged_row) . " |\n";
+    $html_table .= '<tr><td>' . implode('</td><td>', $merged_row) . '</td></tr>';
 }
 
-// Exibir a tabela em Markdown
-echo $markdown_table;
+// Fechar a tabela HTML
+$html_table .= '</table>';
+
+// Exibir a tabela HTML
+echo $html_table;
 ?>
