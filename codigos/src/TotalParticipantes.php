@@ -29,6 +29,7 @@ $html_table = '<table style="border-collapse: collapse; border-spacing: 0; borde
 $html_table .= '<tr style="border: 1px solid black; background-color: #f2f2f2; color: #000;">
 <th style="border: 1px solid black; padding: 8px;">Total de participantes</th>
 <th style="border: 1px solid black; padding: 8px;">Total voltaria no evento</th>
+<th style="border: 1px solid black; padding: 8px;">Total não voltaria no evento</th>
 </tr>';
 
 $total = count($columnData);
