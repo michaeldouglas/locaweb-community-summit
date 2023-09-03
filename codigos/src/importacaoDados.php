@@ -20,7 +20,7 @@ $head = array_slice($data, 0, 5);
 
 // Iniciar a tabela HTML com borda, estilo de espaçamento e bordas nas colunas e linhas
 $html_table = '<table style="border-collapse: collapse; border-spacing: 0; border: 1px solid black; width: 100%;">';
-$html_table .= '<tr style="border: 1px solid black; background-color: #f2f2f2;"><th style="border: 1px solid black; padding: 8px;">NOME</th><th style="border: 1px solid black; padding: 8px;">IDADE</th><th style="border: 1px solid black; padding: 8px;">ESTADO</th><th style="border: 1px solid black; padding: 8px;">CIDADE</th><th style="border: 1px solid black; padding: 8px;">VOLTARIA_NO_EVENTO</th></tr>';
+$html_table .= '<tr style="border: 1px solid black; background-color: #f2f2f2; color: #000;"><th style="border: 1px solid black; padding: 8px;">NOME</th><th style="border: 1px solid black; padding: 8px;">IDADE</th><th style="border: 1px solid black; padding: 8px;">ESTADO</th><th style="border: 1px solid black; padding: 8px;">CIDADE</th><th style="border: 1px solid black; padding: 8px;">VOLTARIA_NO_EVENTO</th></tr>';
 
 foreach ($head as $row) {
     $merged_row = [];
