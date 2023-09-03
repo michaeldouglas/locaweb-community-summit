@@ -27,23 +27,29 @@ $columnData = array_column($responses, $columnIndex);
 // Calcular a média da frequência de "sim" (1), considerando zero se não houver ocorrências de "sim"
 $total = count($columnData);
 if ($total > 0) {
-    array_map(function ($x) {
-      return 1;
-    }, $data);
-
+    //Retornaria
     $sum = array_sum(array_map(function ($x) {
         return strtolower($x) === 'sim' ? 1 : 0;
     }, $columnData));
 
     $mean = $sum / $total * 100;
 
+    //Retornaria
+    $sumNao = array_sum(array_map(function ($x) {
+        return strtolower($x) === 'nao' ? 1 : 0;
+    }, $columnData));
+
+    $meanNao = $sumNao / $total * 100;
+
     $html_table = '<table style="border-collapse: collapse; border-spacing: 0; border: 1px solid black; width: 100%;">';
 $html_table .= '<tr style="border: 1px solid black; background-color: #f2f2f2; color: #000;">
 <th style="border: 1px solid black; padding: 8px;">Média (Frequência de [sim])</th>
+<th style="border: 1px solid black; padding: 8px;">Média (Frequência de [nao])</th>
 </tr>';
 
     $html_table .= '<tr style="border: 1px solid black;">
     <td style="border: 1px solid black; padding: 8px;">' . number_format($mean, 2) . '%</td>
+    <td style="border: 1px solid black; padding: 8px;">' . number_format($meanNao, 2) . '%</td>
     </tr>';
 
     $html_table .= '</table>';
