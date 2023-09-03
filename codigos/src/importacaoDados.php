@@ -19,20 +19,14 @@ echo "Total de participantes: " . $total . "\n\n";
 echo "Exibe os 5 primeiros participantes: " . "\n";
 $head = array_slice($data, 0, 5);
 
-// Criar uma tabela HTML
-$html_table = '<table>';
-$html_table .= '<tr><th>NOME</th><th>IDADE</th><th>ESTADO</th><th>CIDADE</th><th>VOLTARIA_NO_EVENTO</th></tr>';
+// Criar uma tabela em Markdown
+$markdown_table = "| NOME | IDADE | ESTADO | CIDADE | VOLTARIA_NO_EVENTO |\n";
+$markdown_table .= "|------|-------|--------|--------|---------------------|\n";
 
 foreach ($head as $row) {
-    $html_table .= '<tr>';
-    foreach ($row as $value) {
-        $html_table .= '<td>' . htmlspecialchars($value) . '</td>';
-    }
-    $html_table .= '</tr>';
+    $markdown_table .= "|" . implode(" | ", $row) . " |\n";
 }
 
-$html_table .= '</table>';
-
-// Exibir a tabela HTML
-echo $html_table;
+// Exibir a tabela em Markdown
+echo $markdown_table;
 ?>
