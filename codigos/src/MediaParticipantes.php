@@ -37,7 +37,19 @@ if ($total > 0) {
 
     $mean = $sum / $total * 100;
 
-    echo "Média (Frequência de 'sim'): " . number_format($mean, 2) . "%\n";
+    $html_table = '<table style="border-collapse: collapse; border-spacing: 0; border: 1px solid black; width: 100%;">';
+$html_table .= '<tr style="border: 1px solid black; background-color: #f2f2f2; color: #000;">
+<th style="border: 1px solid black; padding: 8px;">Média (Frequência de [sim])</th>
+</tr>';
+
+    $html_table .= '<tr style="border: 1px solid black;">
+    <td style="border: 1px solid black; padding: 8px;">' . number_format($mean, 2) . '%</td>
+    </tr>';
+
+    $html_table .= '</table>';
+
+    echo $html_table;
+
 } else {
     echo "A coluna não contém ocorrências de 'sim'.\n";
 }
