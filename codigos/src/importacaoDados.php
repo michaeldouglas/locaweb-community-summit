@@ -24,7 +24,7 @@ $markdown_table = "| NOME | IDADE | ESTADO | CIDADE | VOLTARIA_NO_EVENTO |\n";
 $markdown_table .= "|------|-------|--------|--------|---------------------|\n";
 
 foreach ($head as $row) {
-    $markdown_table .= "|" . implode(" | ", $row) . " |\n";
+    $markdown_table .= "| " . implode(" | ", $row) . " |\n";
 }
 
 // Exibir a tabela em Markdown
