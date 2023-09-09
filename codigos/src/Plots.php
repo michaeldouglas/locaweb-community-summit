@@ -171,8 +171,7 @@ if ($total > 0) {
             },
             font: {
                 size: 16
-            },
-            width: '100%'
+            }
         };
 
         Plotly.newPlot('totalDiv', dataTotal, layoutTotal);
