@@ -1,2 +1,3 @@
 codigos/src/vendor/
 codigos/src/composer.lock
+codigos/src/modelos/modelo_regressao_logistica.pkl
