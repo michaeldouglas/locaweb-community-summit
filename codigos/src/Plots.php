@@ -182,7 +182,9 @@ if ($total > 0) {
           type: 'pie'
         }];
 
-        Plotly.newPlot('pie1', data);
+        Plotly.newPlot('pie1', data, {
+          title: 'Contagem de participantes',
+        });
 
         var data = [{
           values: [totalSP, totalMG, totalRJ],
