@@ -195,7 +195,7 @@ $modelManager->saveToFile($classifier, __DIR__ . '/modelos/modelo_regressao_logi
       <tr>
         <td><?php echo $precisionPercent;?>%</td>
         <td>
-        <a href="/content/locaweb-community-summit/codigos/src/modelos/modelo_regressao_logistica.pkl" download>Baixar o modelo</a>
+          Modelo gerado: modelo_regressao_logistica.pkl
         </td>
       </tr>
     </table>
