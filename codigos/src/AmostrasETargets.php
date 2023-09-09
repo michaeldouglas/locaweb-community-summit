@@ -31,6 +31,7 @@ $targets = $dataset->getTargets();
         /* Estilo para alternar cores das linhas */
         tr:nth-child(even) {
             background-color: #f2f2f2;
+            color: black;
         }
 
         /* Estilo para os cabeçalhos com cores diferentes */
