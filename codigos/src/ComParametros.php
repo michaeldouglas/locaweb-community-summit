@@ -21,7 +21,7 @@ $classifier = $modelManager->restoreFromFile($modelPath);
 
 // Dados de teste para fazer previsões
 $testData = explode(",", $dados_de_entrada);
-
+$testData[] = $testData;
 print_r($testData);
 
 // // Faça previsões com o modelo carregado
