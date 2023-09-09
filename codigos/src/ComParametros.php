@@ -22,27 +22,26 @@ $classifier = $modelManager->restoreFromFile($modelPath);
 // Dados de teste para fazer previsões
 $separador = explode(",", $dados_de_entrada);
 $testData = [$separador];
-print_r($testData);
 
-// // Faça previsões com o modelo carregado
-// $predictions = $classifier->predict($testData);
+// Faça previsões com o modelo carregado
+$predictions = $classifier->predict($testData);
 
-// // Converta os resultados de volta para 'SIM' ou 'NAO'
-// $predictions = array_map(function ($prediction) {
-//     return ($prediction === 'SIM') ? 'SIM' : 'NAO';
-// }, $predictions);
+// Converta os resultados de volta para 'SIM' ou 'NAO'
+$predictions = array_map(function ($prediction) {
+    return ($prediction === 'SIM') ? 'SIM' : 'NAO';
+}, $predictions);
 
-// // Mapeie características categóricas para valores numéricos
-// $stateMapping = [
-//   'SAO_PAULO' => 1,
-//   'MINAS_GERAIS' => 2,
-//   'RIO_JANEIRO' => 3,
-// ];
+// Mapeie características categóricas para valores numéricos
+$stateMapping = [
+  'SAO_PAULO' => 1,
+  'MINAS_GERAIS' => 2,
+  'RIO_JANEIRO' => 3,
+];
 
-// $cityMapping = [
-//   'SAO_PAULO' => 1,
-//   'BELO_HORIZONTE' => 2,
-//   'RIO_JANEIRO' => 3,
-//   'JUNDIAI' => 4
-// ];
+$cityMapping = [
+  'SAO_PAULO' => 1,
+  'BELO_HORIZONTE' => 2,
+  'RIO_JANEIRO' => 3,
+  'JUNDIAI' => 4
+];
 ?>
