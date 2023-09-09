@@ -183,7 +183,7 @@ if ($total > 0) {
         }];
 
         Plotly.newPlot('pie1', data, {
-          title: 'Contagem de participantes',
+          title: 'Contagem de Participantes',
         });
 
         var data = [{
@@ -193,7 +193,9 @@ if ($total > 0) {
         }];
 
         
-        Plotly.newPlot('pie2', data);
+        Plotly.newPlot('pie2', data, {
+          title: 'Participantes por estado',
+        });
     </script>
 </body>
 </html>
