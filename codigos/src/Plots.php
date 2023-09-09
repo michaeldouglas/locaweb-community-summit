@@ -134,8 +134,7 @@ if ($total > 0) {
             },
             font: {
                 size: 16 // Tamanho da fonte dos rótulos das barras
-            },
-            width: '100%'
+            }
         };
 
         Plotly.newPlot('myDiv', data, layout);
