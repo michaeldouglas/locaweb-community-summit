@@ -50,6 +50,6 @@ if ($total > 0) {
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    dsadsadsadsa
+    <h1>dsadsadsadsa</h1>
 </body>
 </html>
